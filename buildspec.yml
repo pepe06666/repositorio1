@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Empezamos la instalación con PHP 8.3"
+  pre_build:
+    commands:
+      - echo "Empezamos la fase de pre-compilación"
+  build:
+    commands:
+      - echo "Vamos a realizar una prueba"
+      - grep -Fq "estudiantes" index.php
+  post_build:
+    commands:
+      - echo "Empezamos la fase de post-compilación"
